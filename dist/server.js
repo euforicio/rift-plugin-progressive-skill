@@ -14595,11 +14595,18 @@ async function plugin(bb) {
       description: "A skill with decayed score \u2265 this is ranked as 'promoted'."
     }
   });
-  const { budgetChars, promoteScore } = await settings.get();
-  const budget = Number(budgetChars) || LIST_BUDGET_CHARS;
-  const promote = Number(promoteScore) || PROMOTE_SCORE;
+  let { budgetChars, promoteScore } = await settings.get();
+  let budget = Number(budgetChars) || LIST_BUDGET_CHARS;
+  let promote = Number(promoteScore) || PROMOTE_SCORE;
   const tracker = new UsageTracker(bb.storage.kv);
   await tracker.load();
+  settings.onChange((next) => {
+    budgetChars = next.budgetChars;
+    promoteScore = next.promoteScore;
+    budget = Number(budgetChars) || LIST_BUDGET_CHARS;
+    promote = Number(promoteScore) || PROMOTE_SCORE;
+    bb.log.info(`[progressive-skill] settings updated (budget ${budget} chars, promote \u2265 ${promote})`);
+  });
   async function resolveEnvironment(threadId, projectId) {
     try {
       const thread = await bb.sdk.threads.get({ threadId });

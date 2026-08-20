@@ -1,6 +1,6 @@
 {
   "name": "bb-plugin-progressive-skill",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "type": "module",
   "engines": {
     "bb": ">=0.39",
@@ -8,7 +8,7 @@
   },
   "bb": {
     "name": "Progressive Skill",
-    "description": "Smart skill index compaction \u2014 usage-ranked, budget-capped skill lists.",
+    "description": "Smart skill index compaction — usage-ranked, budget-capped skill lists.",
     "branding": {
       "icon": "Layers"
     },
