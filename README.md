@@ -60,3 +60,8 @@ skill.
 
 The decision core is ported from the Hermes `progressive-skill` plugin
 (`core/` modules), which is MIT-licensed. See `LICENSE`.
+
+## Fork provenance
+
+Rift Labs fork: https://github.com/euforicio/rift-plugin-progressive-skill
+Upstream: https://github.com/prismatic7/bb-plugin-progressive-skill

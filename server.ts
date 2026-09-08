@@ -89,7 +89,7 @@ class UsageTracker {
 // ─── Plugin entry ──────────────────────────────────────────────────────
 
 export default async function plugin(bb: RiftPluginApi) {
-  bb.log.info("bb-plugin-progressive-skill loaded");
+  bb.log.info("rift-plugin-progressive-skill loaded");
 
   const settings = bb.settings.define({
     budgetChars: {
@@ -209,6 +209,6 @@ export default async function plugin(bb: RiftPluginApi) {
 
   bb.onDispose(async () => {
     await tracker.save();
-    bb.log.info("bb-plugin-progressive-skill disposed");
+    bb.log.info("rift-plugin-progressive-skill disposed");
   });
 }
