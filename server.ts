@@ -14,7 +14,7 @@
 //
 // The decision logic (decay scoring, promote threshold, budget cap) is ported
 // faithfully from the Hermes core/ modules.
-import { type BbPluginApi } from "@get-bb/plugin-sdk";
+import { type RiftPluginApi } from "@riftlabs/plugin-sdk";
 import { z } from "zod";
 
 // ─── Config (mirrors core/config.py) ──────────────────────────────────
@@ -88,7 +88,7 @@ class UsageTracker {
 
 // ─── Plugin entry ──────────────────────────────────────────────────────
 
-export default async function plugin(bb: BbPluginApi) {
+export default async function plugin(bb: RiftPluginApi) {
   bb.log.info("bb-plugin-progressive-skill loaded");
 
   const settings = bb.settings.define({

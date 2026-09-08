@@ -1,12 +1,15 @@
 {
-  "name": "bb-plugin-progressive-skill",
+  "name": "rift-plugin-progressive-skill",
+  "homepage": "https://riftlabs.app",
+  "author": "Rift Labs",
+  "repository": { "type": "git", "url": "https://github.com/euforicio/rift-plugin-progressive-skill.git" },
   "version": "0.2.1",
   "type": "module",
   "engines": {
-    "bb": ">=0.39",
-    "bbPluginSdk": ">=0.4.8"
+    "rift": ">=0.1.0",
+    "riftPluginSdk": ">=0.4.48"
   },
-  "bb": {
+  "rift": {
     "name": "Progressive Skill",
     "description": "Smart skill index compaction — usage-ranked, budget-capped skill lists.",
     "branding": {
@@ -18,7 +21,7 @@
     "zod": "^4.3.6"
   },
   "devDependencies": {
-    "@get-bb/plugin-sdk": "0.4.8",
+    "@riftlabs/plugin-sdk": "0.4.48",
     "@types/better-sqlite3": "^7.6.12",
     "@types/node": "^22.0.0",
     "@types/react": "^19.0.0",
